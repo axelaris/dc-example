@@ -1,0 +1,4 @@
+---
+- type: replace
+  path: /cloud_provider/properties/vcenter/default_disk_type?
+  value: thin

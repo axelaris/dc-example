@@ -1,0 +1,10 @@
+# The purpose of this file is to set default_disk_type to Thin for BOSH director
+# and all deployments
+---
+- type: replace
+  path: /cloud_provider/properties/vcenter/default_disk_type?
+  value: thin
+
+- type: replace
+  path: /instance_groups/name=bosh/properties/vcenter/default_disk_type?
+  value: thin

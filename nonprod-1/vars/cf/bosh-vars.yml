@@ -1,0 +1,10 @@
+system_domain: a.example.com
+syslog_address: 10.100.21.25
+syslog_port: 5514
+grafana_redirect_uri: https://grafana.a.example.com
+kibana_redirect_uri: https://logs.a.example.com
+network_name: default
+deployment_name: cf
+router_tls_pem:
+- cert_chain: ((router_ssl.certificate))
+  private_key: ((router_ssl.private_key))

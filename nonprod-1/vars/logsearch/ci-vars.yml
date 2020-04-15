@@ -1,0 +1,5 @@
+bbl_env: nonprod-1
+system_domain: a.example.com
+logsearch_version: v211.0.2
+bbl_state_repo: git@github.com:axelaris/dc-denver.git
+git_private_key: ((deploy-key.private_key))

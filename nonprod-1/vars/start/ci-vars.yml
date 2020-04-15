@@ -1,0 +1,9 @@
+env_name: nonprod-1
+iaas: vsphere
+bbl_state_repo: git@github.com:axelaris/dc-denver.git
+git_private_key: ((deploy-key.private_key))
+concourse:
+  address: https://ci.example.com
+  username: admin
+  password: ((admin-password))
+  insecure: "true"

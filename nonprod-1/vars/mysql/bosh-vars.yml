@@ -1,0 +1,3 @@
+cf_api_url: https://api.a.example.com
+cf_skip_ssl_validation: false
+cf_mysql_external_host: mysql.a.example.com

@@ -1,0 +1,21 @@
+bbl_env: nonprod-1
+BBL_IAAS: vsphere
+prometheus_ops_files: |
+  manifests/operators/cf/add-grafana-uaa-clients.yml
+  manifests/operators/cf/add-prometheus-uaa-clients.yml
+logsearch_ops_files: |
+  deployment/operations/cf/add-kibana-uaa-clients.yml
+  deployment/operations/cf/add-firehose-to-syslog-uaa-clients.yml
+collected_ops_files:
+  operations/scale-to-one-az.yml
+  operations/add-grafana-uaa-clients.yml
+  operations/add-prometheus-uaa-clients.yml
+  operations/add-kibana-uaa-clients.yml
+  operations/add-firehose-to-syslog-uaa-clients.yml
+  operations/use-operator-provided-router-tls-certificates.yml
+cf_version: v12.22.0
+prometheus_version: v25.0.0
+logsearch_version: v210.4.0
+cf_domain: a.example.com
+bbl_state_repo: git@github.com:axelaris/dc-denver.git
+git_private_key: ((deploy-key.private_key))

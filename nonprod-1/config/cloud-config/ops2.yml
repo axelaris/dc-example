@@ -1,0 +1,11 @@
+- type: replace
+  path: /networks/name=default/subnets/0/static?
+  value:
+  - 10.100.21.100
+
+- type: replace
+  path: /vm_types/name=medium/cloud_properties?
+  value:
+    cpu: 2
+    ram: 8_192
+    disk: 320_000

@@ -1,0 +1,6 @@
+bbl_env: nonprod-1
+bbl_state_repo: git@github.com:axelaris/dc-denver.git
+git_private_key: ((deploy-key.private_key))
+ops_files: |
+  monitor-bosh.yml
+  monitor-cf.yml

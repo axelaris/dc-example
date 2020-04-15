@@ -1,0 +1,23 @@
+# The purpose of this file is to configure network settings for vSphere
+# Static IP is needed for Coucourse CI web UI
+---
+- type: replace
+  path: /networks
+  value:
+  - name: default
+    type: manual
+    subnets:
+    - range: ((internal_cidr))
+      gateway: ((internal_gw))
+      azs: [z1, z2, z3]
+      dns: [8.8.8.8]
+      reserved:
+      - 10.100.26.0 - 10.100.26.9
+      static:
+      - 10.100.26.10
+      cloud_properties:
+        name: ((network_name))
+
+- type: replace
+  path: /compilation/vm_type
+  value: small-highmem

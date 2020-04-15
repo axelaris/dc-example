@@ -1,0 +1,5 @@
+# The purpose of this file is to set default_disk_type to Thin for Jumpbox
+---
+- type: replace
+  path: /cloud_provider/properties/vcenter/default_disk_type?
+  value: thin

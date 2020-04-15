@@ -1,0 +1,7 @@
+operations/scale-to-one-az.yml
+operations/cloudfoundry.yml
+operations/cerebro.yml
+operations/set-firehose-to-syslog-password.yml
+operations/autocreate-uaa-client.yml
+operations/set-kibana-timeout.yml
+#operations/use-latest-release.yml

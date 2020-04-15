@@ -1,0 +1,17 @@
+BBL_IAAS: vsphere
+BBL_ENV_NAME: nonprod-1
+BBL_VSPHERE_VCENTER_DISKS: azakharov/nonprod-1
+BBL_VSPHERE_VCENTER_TEMPLATES: azakharov/nonprod-1
+BBL_VSPHERE_VCENTER_VMS: azakharov/nonprod-1
+BBL_VSPHERE_VCENTER_RP: azakharov
+BBL_VSPHERE_NETWORK:
+BBL_VSPHERE_VCENTER_DS:
+BBL_VSPHERE_SUBNET_CIDR: 10.100.21.0/24
+BBL_VSPHERE_VCENTER_IP:
+BBL_VSPHERE_VCENTER_DC:
+BBL_VSPHERE_VCENTER_CLUSTER: 
+BBL_VSPHERE_VCENTER_USER: ((vcenter-user))
+BBL_VSPHERE_VCENTER_PASSWORD: ((vcenter-password))
+git_commit_email: alexey.zakharov@altoros.com
+bbl_state_repo: git@github.com:axelaris/dc-denver.git
+git_private_key: ((deploy-key.private_key))
