@@ -1,0 +1,5 @@
+---
+- type: replace
+  path: /vm_extensions/name=500GB_ephemeral_disk/cloud_properties?/disk?
+  value: 512000
+
