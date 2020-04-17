@@ -1,0 +1,86 @@
+---
+- type: replace
+  path: /instance_groups/name=minio/azs
+  value:
+  - ((az))
+
+- type: replace
+  path: /instance_groups/name=tests/azs
+  value:
+  - ((az))
+
+- type: replace
+  path: /instance_groups/name=bucket-seeding/azs
+  value:
+  - ((az))
+
+- type: replace
+  path: /stemcells/alias=default/os
+  value: ubuntu-xenial
+
+- type: replace
+  path: /instance_groups/name=minio/networks
+  value:
+  - name: ((network))
+
+- type: replace
+  path: /instance_groups/name=minio/vm_type
+  value: ((vm_type))
+
+- type: replace
+  path: /instance_groups/name=tests/networks
+  value:
+  - name: ((network))
+
+- type: replace
+  path: /instance_groups/name=tests/vm_type
+  value: ((vm_type))
+
+- type: replace
+  path: /instance_groups/name=bucket-seeding/networks
+  value:
+  - name: ((network))
+
+- type: replace
+  path: /instance_groups/name=bucket-seeding/vm_type
+  value: ((vm_type))
+
+- type: replace
+  path: /instance_groups/name=minio/persistent_disk_type
+  value: 50GB
+
+- type: replace
+  path: /instance_groups/name=tests/persistent_disk_type
+  value: 5GB
+
+- type: replace
+  path: /instance_groups/name=bucket-seeding/persistent_disk_type
+  value: 5GB
+
+- type: replace
+  path: /instance_groups/name=tests/persistent_disk_type
+  value: 5GB
+
+- type: replace
+  path: /releases/name=minio
+  value:
+    name: minio
+    url: https://bosh.io/d/github.com/minio/minio-boshrelease?v=2020-03-25T07-03-04Z
+    sha1: abd6ea79a257a6122bdff9aa9f44727280d40f15
+    version: 2020-03-25T07-03-04Z
+
+- type: replace
+  path: /instance_groups/name=minio/jobs/name=minio-server/properties/server_cert?
+  value: ((ssl-cert.certificate))
+
+- type: replace
+  path: /instance_groups/name=minio/jobs/name=minio-server/properties/server_key?
+  value: ((ssl-cert.private_key))
+
+- type: replace
+  path: /instance_groups/name=minio/jobs/name=minio-server/properties/ca_cert?
+  value: ((ssl-cert.ca))
+
+- type: replace
+  path: /instance_groups/name=minio/jobs/name=minio-server/properties/port
+  value: 443
